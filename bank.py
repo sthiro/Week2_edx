@@ -9,7 +9,7 @@ Greeting = input("Greeting: ").strip().casefold()
 
 
 if Greeting.startswith('hello'):
-    print("0")
+    print("$0")
 elif Greeting.startswith("h"):
     print("$20")
 else:
