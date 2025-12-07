@@ -4,12 +4,12 @@
 #----------------------------
 # .gif => image/gif
 # .png => image/png
-# .jpg => image/jpeg 
-# .jpeg => image/jpeg 
-# .txt => text/plain 
-# .zip => application/zip 
-# .pdf => application/pdf 
-# Other suffixes or no suffix at all output "application/octet-stream" 
+# .jpg => image/jpeg
+# .jpeg => image/jpeg
+# .txt => text/plain
+# .zip => application/zip
+# .pdf => application/pdf
+# Other suffixes or no suffix at all output "application/octet-stream"
 #----------------------------
 
 
@@ -20,21 +20,21 @@ match extension:
 
     case "gif":
         mime = "image/gif"
-    
+
     case "png":
         mime = "image/png"
-    
+
     case "jpg" | "jpeg":
-        mime = "image/jpeg" 
+        mime = "image/jpeg"
 
     case "txt":
-        mime = "text/plain" 
+        mime = "text/plain"
 
     case "pdf":
-        mime = "application/pdf" 
-    
+        mime = "application/pdf"
+
     case "zip":
-        mime = "application/zip" 
+        mime = "application/zip"
 
     case _:
         mime = "application/octet-stream"
