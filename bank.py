@@ -8,7 +8,7 @@ Greeting = input("Greeting: ").strip().casefold()
 #Small letters and no blank space both side
 
 
-if "hello" in  Greeting:
+if Greeting.startswith('hello'):
     print("0")
 elif Greeting.startswith("h"):
     print("$20")
