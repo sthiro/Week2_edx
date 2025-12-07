@@ -13,34 +13,35 @@
 #:## p.m. and ##:## p.m.
 
 #_________________________________
-# Task 1  (Done)     |    Task 2  
+# Task 1  (Done)     |    Task 2
 #---------------------------------
-# 24H format         | 12H format   
+# 24H format         | 12H format
 #_________________________________
 
 #******************************************************************************************
 
-time_24 = input("What time is it? ")
 
 
 def main():
+    time_24 = input("What time is it? ")
+
     time_integer = convert(time_24)
 
     if 7 <= time_integer <= 8:
         print("breakfast time")
-    
+
     elif 12 <= time_integer <= 13:
         print("lunch time")
 
     elif 18 <= time_integer <= 19:
         print("dinner time")
 
-    
+
 
 
 def convert(time):
-    hours, minutes = time.split(":") 
-    hours, minutes = int(hours), int(minutes)/60 # Hours and minute are interger now 
+    hours, minutes = time.split(":")
+    hours, minutes = int(hours), int(minutes)/60 # Hours and minute are interger now
 
     return hours + minutes # if time = "7:30" convert and returns 7.5
 

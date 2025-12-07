@@ -21,20 +21,22 @@
 #******************************************************************************************
 
 
-time_12 = input("What time is it? ").split(" ")
-time_24 = time_12[0] #Changes single value list into string
 
-if "a.m." in time_12:
-    format_12 = "a.m."
-
-elif "p.m." in time_12:                 ## Conversion to 12H if it's 24H
-    format_12 = "p.m."
-   
-else:
-    format_12 = "24h"
-    
 
 def main():
+    time_12 = input("What time is it? ").split(" ")
+    time_24 = time_12[0] #Changes single value list into string
+    global format_12
+    if "a.m." in time_12:
+        format_12 = "a.m."
+
+    elif "p.m." in time_12:                 ## Conversion to 12H if it's 24H
+        format_12 = "p.m."
+    
+    else:
+        format_12 = "24h"
+        
+
     time_integer = convert(time_24)
 
     if 7 <= time_integer <= 8:
@@ -55,6 +57,7 @@ def convert(time): #time is in 24h format,
         hours = 0
 
     if format_12 == "24h" or format_12 == "a.m." or hours == 12: # Checks hour == 12 , Note: it's true when only it's pm 
+        print(hours+minutes)
         return hours + minutes # if time = "7:30" convert and returns 7.5
     else:
         return hours + minutes + 12 # Adds  12 hours only time > 1pm
